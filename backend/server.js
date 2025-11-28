@@ -12,10 +12,10 @@ import analyticsRoutes from "./routes/analyticsRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: "*", 
-  credentials: true
-}));
+// app.use(cors({
+//   origin: "http://localhost:5173",  // your frontend URL
+//   credentials: true
+// }));
 
 app.use(helmet());
 app.use(cors());
