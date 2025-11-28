@@ -1,1 +1,43 @@
+# -----------------------
+# Node Dependencies
+# -----------------------
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# -----------------------
+# Build Output
+# -----------------------
+dist/
+dist-ssr/
+build/
+*.log
+
+# -----------------------
+# Environment Files
+# -----------------------
 .env
+.env.local
+.env.development
+.env.production
+.env.test
+frontend/.env
+backend/.env
+
+# -----------------------
+# System Files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Vercel / Deployment
+# -----------------------
+.vercel
+.vercel_build_output/
+
+# -----------------------
+# Editor Files
+# -----------------------
+.vscode/
+.idea/
