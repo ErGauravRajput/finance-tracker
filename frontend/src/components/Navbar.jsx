@@ -4,6 +4,7 @@ import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
   const { isAuthenticated, user, logout } = useAuth();
+  // console.log(user);
   const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
@@ -32,17 +33,17 @@ const Navbar = () => {
 
         {isAuthenticated ? (
           <>
-            <span className="role-pill">{user?.role}</span>
+            <span className="role-pill">{user?.name}</span>
             <button onClick={handleLogout} className="btn-primary">
               Logout
             </button>
           </>
         ) : (
           <>
-            <Link to="/login" className="btn-primary">
+            <Link to="/login" className="btn-main">
               Login
             </Link>
-            <Link to="/register" className="btn-outline">
+            <Link to="/register" className="btn-main">
               Register
             </Link>
           </>

@@ -185,6 +185,7 @@ button {
   background: var(--primary);
   color: white;
 }
+
 .btn-primary:hover {
   opacity: 0.9;
 }
@@ -202,8 +203,18 @@ button {
   border: 1px solid var(--border);
   background: transparent;
 }
+
 .btn-secondary:hover {
   background: #f1f5f9;
+}
+body[data-theme="dark"] .nav-right .btn-secondary {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+body[data-theme="dark"] .nav-right .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
 
 .btn-danger {
@@ -340,14 +351,190 @@ body[data-theme="dark"] .chart-wrapper {
 }
 
 
-/* Income = green */
-.income-row td {
-  color: #16a34a;
+
+/* Remove background highlight on hover */
+
+.recharts-tooltip-cursor {
+  display: none;
+}
+
+
+
+
+/* -----------------------------------------------------
+   🔵 UNIVERSAL BUTTON (Login + Register)
+----------------------------------------------------- */
+.btn-main {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hover animation */
+.btn-main:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+
+/* -----------------------------------------------------
+   🔵 DARK MODE
+----------------------------------------------------- */
+body[data-theme="dark"] .btn-main {
+  background: var(--primary-dark);
+  color: #fff;
+  border: 1px solid var(--primary);
+}
+
+body[data-theme="dark"] .btn-main:hover {
+  opacity: 0.85;
+}
+
+
+
+
+
+
+/* -----------------------------------------------------
+   🔵 LOGIN CARD
+----------------------------------------------------- */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
+}
+
+body[data-theme="dark"] .auth-card {
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.auth-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Title */
+.auth-card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+}
+
+body[data-theme="dark"] .auth-card h2 {
+  color: var(--text-dark);
+}
+
+
+/* -----------------------------------------------------
+   🔵 INPUT LABELS & FIELDS
+----------------------------------------------------- */
+.auth-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+body[data-theme="dark"] .auth-card label {
+  color: var(--text-dark);
+}
+
+.auth-card input {
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fff;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+body[data-theme="dark"] .auth-card input {
+  background: #0f131a;
+  border: 1px solid var(--border-dark);
+  color: var(--text-dark);
+}
+
+.auth-card input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+
+/* -----------------------------------------------------
+   🔵 ERROR MESSAGE
+----------------------------------------------------- */
+.error {
+  margin-top: -0.3rem;
+  font-size: 0.85rem;
+  color: var(--danger);
   font-weight: 600;
 }
 
-/* Expense = red */
-.expense-row td {
-  color: #ef4444;
+
+/* -----------------------------------------------------
+   🔵 SUBMIT BUTTON
+----------------------------------------------------- */
+.auth-card .btn-primary {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: var(--primary);
+  color: #fff;
   font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.25s ease;
 }
+
+.auth-card .btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Dark mode */
+body[data-theme="dark"] .auth-card .btn-primary {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+body[data-theme="dark"] .auth-card .btn-primary:hover {
+  opacity: 0.85;
+}
+
+
+/* Disabled Loading State */
+.auth-card .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* -----------------------------------------------------
+   🔵 FORM SPACING
+----------------------------------------------------- */
+.auth-card .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+

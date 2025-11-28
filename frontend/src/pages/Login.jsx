@@ -61,7 +61,7 @@ const Login = () => {
 
         {error && <p className="error">{error}</p>}
 
-        <button type="submit" className="btn-primary" disabled={loading}>
+        <button type="submit" className="btn-main" disabled={loading}>
           {loading ? "Logging in..." : "Login"}
         </button>
       </form>

@@ -14,7 +14,7 @@ const TrendLine = ({ trends }) => {
 
   return (
     <ResponsiveContainer width="100%" height={260}>
-      <LineChart data={trends}>
+      <LineChart data={trends} margin={{ top: 20, right: 30, left: 30, bottom: 20 }}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="month" />
         <YAxis />
