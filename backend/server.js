@@ -12,9 +12,10 @@ import analyticsRoutes from "./routes/analyticsRoutes.js";
 dotenv.config();
 
 const app = express();
-console.log("DB PASS =>", process.env.DB_PASS);
-console.log("DB USER =>", process.env.DB_USER);
-console.log("DB NAME =>", process.env.DB_NAME);
+app.use(cors({
+  origin: "*", 
+  credentials: true
+}));
 
 app.use(helmet());
 app.use(cors());
